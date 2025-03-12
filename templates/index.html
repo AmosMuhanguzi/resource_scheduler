@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Scheduler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Resource Scheduler</h1>
+            <div class="simulation-controls">
+                <div class="control-panel">
+                    <button id="start-btn" class="btn">Start</button>
+                    <button id="pause-btn" class="btn" disabled>Pause</button>
+                    <button id="resume-btn" class="btn" style="display: none;">Resume</button>
+                    <button id="stop-btn" class="btn" disabled>Stop</button>
+                    <button id="reset-btn" class="btn">Reset</button>
+                </div>
+                <div class="algorithm-selector">
+                    <label for="algorithm">Scheduling Algorithm:</label>
+                    <select id="algorithm">
+                        <option value="round_robin">Round Robin</option>
+                        <option value="priority">Priority Based</option>
+                        <option value="shortest_job_next">Shortest Job Next</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <div class="metrics-panel">
+            <div class="metric">
+                <h3>Average Wait Time</h3>
+                <p id="avg-wait-time">0.00s</p>
+            </div>
+            <div class="metric">
+                <h3>Agent Utilization</h3>
+                <p id="avg-utilization">0%</p>
+            </div>
+            <div class="metric">
+                <h3>Task Fairness</h3>
+                <p id="fairness">0%</p>
+            </div>
+            <div class="metric">
+                <h3>Customers Served</h3>
+                <p id="customers-served">0</p>
+            </div>
+        </div>
+
+        <div class="simulation-status">
+            <div id="status-indicator" class="status-indicator status-stopped"></div>
+            <span id="status-text">Simulation Stopped</span>
+        </div>
+
+        <div class="main-content">
+            <div class="panel agents-panel">
+                <div class="panel-header">
+                    <h2>Agents</h2>
+                    <button id="add-agent-btn" class="btn">Add Agent</button>
+                </div>
+                <div class="agent-form-container" id="agent-form-container">
+                    <form id="add-agent-form" class="add-agent-form">
+                        <div class="form-row">
+                            <input type="text" id="agent-name" placeholder="Agent Name" required>
+                            <select id="agent-workload">
+                                <option value="1">Max Load: 1</option>
+                                <option value="2">Max Load: 2</option>
+                                <option value="3" selected>Max Load: 3</option>
+                                
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <button type="submit" class="btn btn-submit">Add</button>
+                            <button type="button" id="cancel-add-agent" class="btn btn-cancel">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="agents-container" class="agents-container"></div>
+            </div>
+
+            <div class="panel queue-panel">
+                <h2>Customer Queue</h2>
+                <div id="queue-container" class="queue-container"></div>
+            </div>
+        </div>
+
+        <div class="panel active-customers-panel">
+            <h2>Customers Being Served</h2>
+            <div id="active-customers-container" class="active-customers-container"></div>
+        </div>
+
+        <div class="panel completed-panel">
+            <h2>Recently Completed</h2>
+            <div id="completed-container" class="completed-container"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
