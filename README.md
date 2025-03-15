@@ -113,29 +113,6 @@ customer_update - Customer queue changes
 metrics_update - Performance metrics updates
 ```
 
-## Configuration
-
-Configuration is managed through `config.py`:
-
-```python
-# Example configuration
-class Config:
-    # Database settings
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///scheduler.db'
-    
-    # Simulation settings
-    DEFAULT_AGENTS = 5
-    MAX_AGENTS = 20
-    UPDATE_INTERVAL = 5  # seconds
-    
-    # Customer generation settings
-    CUSTOMER_ARRIVAL_RATE = 0.2  # customers per second
-    VIP_RATIO = 0.1
-    CORPORATE_RATIO = 0.3
-    
-    # Algorithm settings
-    DEFAULT_ALGORITHM = 'round_robin'
-```
 
 ## Scheduling Algorithms
 
