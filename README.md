@@ -54,20 +54,20 @@ python app.py
 - Customizable service requirements
 
 ### Agent Management
+- automatically three agents are assigned on start
 - Add or remove agents during simulation
 - Real-time agent status monitoring
 - Workload distribution visualization
 - Agent performance metrics
 
 ### Scheduling Algorithms
-- Round Robin: Distributes customers to agents in a circular sequence
+- Round Robin: where each agent receives tasks equally
 - Priority-based: Prioritizes VIP and Corporate customers
 - Shortest Job Next: Assigns customers with shortest expected service time first
 
 ### Simulation Control
 - Start/pause functionality
-- Reset capabilities
-- Adjustable simulation speed
+- Reset/ stop capabilities
 - Real-time system state updates
 
 ## System Architecture
@@ -128,10 +128,10 @@ Minimizes average wait time by assigning customers with the shortest expected se
 The application tracks and displays:
 
 - **Average Wait Time**: Mean time customers spend waiting
-- **Agent Utilization**: Percentage of time agents are active
+- **Agent Utilization**: which measures how much time agents spend working versus being idle
 - **Queue Length**: Current number of waiting customers
-- **Throughput**: Customers served per time unit
-- **Service Level**: Percentage of customers served within target time
+- **task fairnes**: ensuring tasks are evenly distributed among agents to prevent bottlenecks
+- **customers being served**: number of customers served within target time
 
 ## User Interface
 
