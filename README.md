@@ -23,8 +23,8 @@ Resource Scheduler is a Flask web application designed to optimize the allocatio
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/resource-scheduler.git
-cd resource-scheduler
+git clone https://github.com/AmosMuhanguzi/resource-scheduler.git
+cd resource_scheduler
 
 # Create and activate a virtual environment
 python -m venv venv
@@ -33,13 +33,8 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Initialize the database
-flask db init
-flask db migrate
-flask db upgrade
-
 # Start the application
-flask run
+python app.py
 ```
 
 ## Getting Started
