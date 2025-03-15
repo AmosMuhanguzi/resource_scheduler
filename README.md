@@ -23,7 +23,7 @@ Resource Scheduler is a Flask web application designed to optimize the allocatio
 
 ```bash
 # Clone the repository
-git clone https://github.com/AmosMuhanguzi/resource-scheduler.git
+git clone https://github.com/AmosMuhanguzi/resource_scheduler.git
 cd resource_scheduler
 
 # Create and activate a virtual environment
