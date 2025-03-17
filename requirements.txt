@@ -1,1 +1,8 @@
-flask
+Flask
+gunicorn
+blinker
+itsdangerous
+MarkupSafe
+Jinja2
+packaging
+Werkzeug
