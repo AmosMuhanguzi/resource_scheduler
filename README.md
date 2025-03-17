@@ -161,4 +161,10 @@ The UI consists of:
 4. Push to the branch: `git push origin feature-name`
 5. Submit a pull request
 
-Please follow coding standards and add unit tests for new features.
+
+
+
+
+
+
+
