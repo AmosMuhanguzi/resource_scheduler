@@ -12,12 +12,11 @@ Resource Scheduler is a Flask web application designed to optimize the allocatio
 3. [Key Features](#key-features)
 4. [System Architecture](#system-architecture)
 5. [API Reference](#api-reference)
-6. [Configuration](#configuration)
-7. [Scheduling Algorithms](#scheduling-algorithms)
-8. [Performance Metrics](#performance-metrics)
-9. [User Interface](#user-interface)
-10. [Troubleshooting](#troubleshooting)
-11. [Contributing](#contributing)
+6. [Scheduling Algorithms](#scheduling-algorithms)
+7. [Performance Metrics](#performance-metrics)
+8. [User Interface](#user-interface)
+9. [Troubleshooting](#troubleshooting)
+10. [Contributing](#contributing)
 
 ## Installation
 
