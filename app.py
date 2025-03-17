@@ -68,4 +68,4 @@ def remove_agent():
     return jsonify({"status": "success" if success else "failed"})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
